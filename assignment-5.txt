@@ -1,0 +1,198 @@
+1)a)Print odd numbers in an array
+
+CODE/ANS:-
+var arr=[0,1 ,2 ,3, 4 ,5, 6,7,8,9,10,11,12,13,14,15];
+var i, oddarray=[];
+ for(i=0;i<arr.length;i++)
+ {
+     if(arr[i]%2!==0){
+         oddarray.push(arr[i]);
+     }
+ }
+ console.log(oddarray);
+ console.log(arr.length);
+
+OUTPUT:
+2script.js:68   (8) [1, 3, 5, 7, 9, 11, 13, 15]
+2script.js:69   16
+
+1)b)Convert all the strings to title caps in a string array
+
+CODE/ANS:-
+function titleCase(str){
+  str=str.toLowerCase().split(' ');
+  for(var i=0;i<str.length;i++)
+  {
+    str[i]=str[i].charAt(0).toUpperCase()+str[i].slice(1);
+  }
+  return str.join(' ');
+}
+console.log(titleCase("guvi geeks network "));
+OUTPUT:-
+
+2script.js:79   Guvi Geeks Network 
+
+1)C)Sum of all numbers in an array
+
+CODE/ANS:-
+var i,arr=[1,2,3,4,5]
+let sum=0
+for(i=0;i<arr.length;i++){
+  sum+=arr[i];
+
+}console.log(sum);
+OUTPUT:-
+
+2script.js:87     15
+
+1)D)Return all the prime numbers in an array
+
+CODE/ANS:-
+
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+	
+numArray = numArray.filter((number) => 
+
+ for (var i = 2; i <= Math.sqrt(number); i++)
+{
+   if (number % i === 0) return false;
+}
+  return true;
+});
+console.log(numArray);
+OUTPUT:-
+2script.js:58 (4) [2, 3, 5, 7]
+
+
+1)E)Return all the palindromes in an array
+CODE/ANS:-
+
+var string=prompt("please enter the string");
+var len=string.length;
+var msg='it is a palindrome';
+for(var i=0;i<len/2;i++)
+{
+    if(string[i]!=string[len-1-i])
+{
+    msg="it is not palindrome";
+}
+}
+console.log(`${string}:${msg}`);
+
+OUTPUT:-
+
+2script.js:19 madam:it is a palindrome
+
+2script.js:19 member:it is not palindrome
+
+
+1)f)Return median of two sorted arrays of same size
+
+CODE/ANS:-
+
+var arr1=[4,2,6,6,5];
+var arr2=[8,5,0,7,1];
+let concatArr=arr1.concat(arr2)
+var sortedArr=concatArr.sort((a,b)=>a-b);
+console.log(sortedArr);
+let middleIndex=sortedArr.length/2;
+console.log(sortedArr[middleIndex]+sortedArr[middleIndex-1])
+
+OUTPUT:-
+
+﻿2script.js:5 
+(10) [0, 1, 2, 4, 5, 5, 6, 6, 7, 8]
+2script.js:7 10
+
+1)g)Remove duplicates from an array
+
+CODE/ANS:-
+
+var valarr = ["param","nani","pinky","nani","siri","rani","pinky"];
+
+var unique = valarr.reduce(function(a,b){
+    if (a.indexOf(b) < 0 ) a.push(b);
+    return a;
+  },[]);
+
+console.log(valarr,unique)
+
+OUTPUT:-2script.js:33 (7) ['param', 'nani', 'pinky', 'nani', 'siri', 'rani', 'pinky'] (5) ['param', 'nani', 'pinky', 'siri', 'rani']
+
+1)H)Rotate an array by k times
+
+CODE/ANS-
+
+var array=[1,2,3,4,5];
+function rotate(array, stepsToShift) {
+
+    for (var i = 0; i < stepsToShift; i++) {
+        array.unshift(array.pop());
+    }
+
+    return array;
+}
+console.log(rotate(array,2));
+OUTPUT:-
+2script.js:44 (5) [4, 5, 1, 2, 3]
+
+3Q)Do the below programs in arrow functions
+a)Print odd numbers in an array
+CODE/ANS:-
+
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12]
+let odds = arr.filter(n => n%2)
+console.log(odds)
+OUTPUT:-
+
+2script.js:104 (6) [1, 3, 5, 7, 9, 11] 
+
+3Q)b)Convert all the strings to title caps in a string array
+
+CODE/ANS:-
+
+var str = "guvi geeks network"
+console.log(
+str.split(' ')
+   .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+   .join(' ')
+)
+OUTPUT:-
+
+2script.js:108 Guvi Geeks Network
+
+3Q)c)Sum of all numbers in an array
+CODE/ANS:-
+
+var numbers = [3,1,0,2];
+var sum = numbers.reduce((x, y) => x + y);
+console.log(sum);
+
+OUTPUT:-
+2script.js:79 6
+
+3)Q)D)Return all the prime numbers in an array
+
+CODE/ANS:-
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+
+OUTPUT:-
+2script.js:86 (4) [2, 3, 5, 7]
+
+3Q)e)Return all the palindromes in an array
+
+CODE/ANS:-
+const getAllPalindromes = (words) => words.filter((word) => word.split("").reverse().join("") === word);
+
+console.log(getAllPalindromes(["hello", "mam","noon"]));
+
+OUTPUT:-2script.js:78 (2) ['mam', 'noon']
